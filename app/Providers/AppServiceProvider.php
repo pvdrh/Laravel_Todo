@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,5 +26,12 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        $username = 'Duy';
+        $menus = [
+            'Danh sach',
+            'Trang chi'
+        ];
+        View::share('menus', $menus);
+        View::share('username', $username);
     }
 }

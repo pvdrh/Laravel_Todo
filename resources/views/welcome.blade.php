@@ -127,6 +127,12 @@
                     </div>
                 </div>
             </div>
+
+            <form method="post" action="{{route('save')}}">
+            @csrf
+                    <button type="submit">Save</button>
+            </form>
+            
         </div>
     </body>
 </html>
