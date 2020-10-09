@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -15,7 +15,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
-    <style>
+    {{-- <style>
         body {
             font-family: 'Lato';
         }
@@ -39,22 +39,20 @@
             <a class="navbar-brand" href="{{ url('/') }}">
                 Danh sách công việc
             </a>
-        </div>
+        </div> --}}
 
-        @foreach($menus as $menu)
+        {{-- @foreach($menus as $menu)
             <div>
                 <a href="#" style="color: blue">{{ $menu }}</a>
             </div>
-        @endforeach
+        @endforeach --}}
 
-        @php
-        echo 'alloo';
-        @endphp
+  
 
-    </div>
-</nav>
+    {{-- </div>
+</nav> --}}
 
-@if (count($records) === 1)
+{{-- @if (count($records) === 1)
     Có 1
 @elseif (count($records) > 1)
     Có nhiều
@@ -73,37 +71,35 @@
     @case(2)
     <h1>Hí anh em</h1>
     @break
-@endswitch
-
-{!!<p><b>Phajm van duy<u>&nbsp;bacbasdsisad</u></b></p> !!}
+@endswitch --}}
 
 
 
-<div class="container">
+{{-- <div class="container">
     <div class="col-sm-offset-2 col-sm-8">
         <div class="panel panel-default">
             <div class="panel-heading">
                 Thêm công việc mới
             </div>
 
-            <div class="panel-body">
+            <div class="panel-body"> --}}
                 <!-- Display Validation Errors -->
 
                 <!-- New Task Form -->
-                <form action="{{ url('task')}}" method="POST" class="form-horizontal">
-                {{ csrf_field() }}
+                {{-- <form action="{{ url('task')}}" method="POST" class="form-horizontal">
+                {{ csrf_field() }} --}}
 
                 <!-- Task Name -->
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="task-name" class="col-sm-3 control-label">Tên công việc</label>
 
                         <div class="col-sm-6">
                             <input type="text" name="name" id="task-name" class="form-control" value="{{ old('task') }}">
                         </div>
-                    </div>
+                    </div> --}}
 
                     <!-- Add Task Button -->
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <div class="col-sm-offset-3 col-sm-6">
                             <button type="submit" class="btn btn-default">
                                 <i class="fa fa-btn fa-plus"></i>Thêm công việc
@@ -112,10 +108,10 @@
                     </div>
                 </form>
             </div>
-        </div>
+        </div> --}}
 
         <!-- Current Tasks -->
-        <div class="panel panel-default">
+        {{-- <div class="panel panel-default">
             <div class="panel-heading">
                 Danh sách công việc hiện tại
             </div>
@@ -128,15 +124,15 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td class="table-text"><div>Làm bài tập Laravel </div></td>
+                        <td class="table-text"><div>Làm bài tập Laravel </div></td> --}}
                         <!-- Task Complete Button -->
-                        <td>
+                        {{-- <td>
                             <a href="{{ url('task/complete/1') }}" type="submit" class="btn btn-success">
                                 <i class="fa fa-btn fa-check"></i>Hoàn thành
                             </a>
-                        </td>
+                        </td> --}}
                         <!-- Task Delete Button -->
-                        <td>
+                        {{-- <td>
                             <form action="{{ url('task/1') }}" method="POST">
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
@@ -148,15 +144,16 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="table-text"><div>Làm bài tập PHP  </div></td>
+                        <td class="table-text"><div>Làm bài tập PHP  </div></td> --}}
+                        
                         <!-- Task Complete Button -->
-                        <td>
+                        {{-- <td>
                             <a href="{{ url('task/complete/1') }}" type="submit" class="btn btn-success">
                                 <i class="fa fa-btn fa-check"></i>Hoàn thành
                             </a>
-                        </td>
+                        </td> --}}
                         <!-- Task Delete Button -->
-                        <td>
+                        {{-- <td>
                             <form action="{{ url('task/2') }}" method="POST">
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
@@ -167,16 +164,18 @@
                             </form>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="table-text"><div><strike>Làm project Laravel </strike></div></td>
+                    <tr> --}}
+                        {{-- <td class="table-text"><div><strike>Làm project Laravel </strike></div></td> --}}
                         <!-- Task Complete Button -->
-                        <td>
+                        {{-- <td>
                             <a href="{{ url('task/complete/1') }}" type="submit" class="btn btn-success">
                                 <i class="fa fa-btn fa-refresh"></i>Làm lại
                             </a>
-                        </td>
+                        </td> --}}
+
+                      
                         <!-- Task Delete Button -->
-                        <td>
+                        {{-- <td>
                             <form action="{{ url('task/3') }}" method="POST">
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
@@ -192,11 +191,29 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 <!-- JavaScripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
-</body>
-</html>
+{{-- </body>
+</html>  --}}
+
+    @foreach($list as $lists)
+        <td>
+            <br>
+            <div>{{$lists['name']}}</div>
+        </td>
+
+        @if($lists['status'] === 0)
+            Chua Lam
+        
+        @elseif($lists['status'] === 1)
+            Da hoan thanh
+        
+        @elseif($lists['status'] === -1)
+            Khong thuc hien
+        
+        @endif
+    @endforeach

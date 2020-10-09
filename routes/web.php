@@ -114,6 +114,27 @@ Route::prefix('quanly')->group(function(){
 
     })->name('task.edit');
 
+    Route::get('list', function() {
+
+        $list = [
+            [
+                'name' => 'Học View trong Laravel',
+                'status' => 0
+            ],
+            [
+                'name' => 'Học Route trong Laravel',
+                'status' => 1
+            ],
+            [
+                'name' => 'Làm bài tập View trong Laravel',
+                'status' => -1
+            ],
+        ];
+
+        //cách 2
+        return view('tasks.list')->with(['list' => $list]);
+    })->name('task.list');
+
  });
 
  Route::get('profile', function() {
