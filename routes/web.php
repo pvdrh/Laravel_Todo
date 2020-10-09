@@ -114,13 +114,17 @@ Route::prefix('quanly')->group(function(){
 
     })->name('task.edit');
 
-    Route::get('list', function() {
-        return view('tasks.list', [
-            'records' => [
-                1,2,3
-            ],
-            'i' => 2
-        ]);
-    })->name('task.list');
  });
 
+ Route::get('profile', function() {
+    return view('profile',[])->with([
+        'name'=>'Pham Van Duy',
+        'age'=>'20',
+        'school'=>'VNUA',
+        'hometown'=>'Ha Giang',
+        'aboutme'=>'<label>Hí anh em</label>',
+        'goal'=>'Alo 1234'
+    ]);
+})->name('profile');
+
+ 
