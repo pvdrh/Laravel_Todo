@@ -1,3 +1,4 @@
+@extends('layouts.master')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,15 @@
     <title>Profile</title>
 </head>
 <body>
-  {{$name}}
+
+ 
+@section('body')
+    
+@endsection
+
+
+
+  {{-- {{$name}}
   <br>
   {{$age}}
   <br>
@@ -17,7 +26,7 @@
  <br>
   {!!$aboutme!!}
 <br>
-  {{$goal}}
+  {{$goal}} --}}
 
 </body>
 </html>

@@ -137,15 +137,23 @@ Route::prefix('quanly')->group(function(){
 
  });
 
- Route::get('profile', function() {
-    return view('profile',[])->with([
-        'name'=>'Pham Van Duy',
-        'age'=>'20',
-        'school'=>'VNUA',
-        'hometown'=>'Ha Giang',
-        'aboutme'=>'<label>Hí anh em</label>',
-        'goal'=>'Alo 1234'
-    ]);
-})->name('profile');
+//  Route::get('profile', function() {
+//     return view('profile',[])->with([
+//         'name'=>'Pham Van Duy',
+//         'age'=>'20',
+//         'school'=>'VNUA',
+//         'hometown'=>'Ha Giang',
+//         'aboutme'=>'<label>Hí anh em</label>',
+//         'goal'=>'Alo 1234'
+//     ]);
+// })->name('profile');
+
+Route::get('home', function(){
+    return view('home');
+ });
+
+ Route::get('profile', function(){
+    return view('profile');
+ });
 
  
