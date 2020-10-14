@@ -124,7 +124,7 @@
                         
                         <!-- Task Complete Button -->
                          <td>
-                            <a href="{{ route('task.complete') }}" type="submit" class="btn btn-success">
+                            <a href="{{ url('task/complete/1') }}" type="submit" class="btn btn-success">
                                 <i class="fa fa-btn fa-check"></i>Hoàn thành
                             </a>
                         </td> 
@@ -144,7 +144,7 @@
                         {{-- <td class="table-text"><div><strike>Làm project Laravel </strike></div></td> --}}
                         <!-- Task Complete Button -->
                          <td>
-                            <a href="{{ route('task.reComplete') }}" type="submit" class="btn btn-success">
+                            <a href="{{ route('task.destroy') }}" type="submit" class="btn btn-success">
                                 <i class="fa fa-btn fa-refresh"></i>Làm lại
                             </a>
                         </td>

@@ -35,7 +35,7 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        $name = $request->only('name');
+        $name = $request->only('name');\
         $deadline = $request->only('deadline');
 
         dd($name,$deadline);
@@ -92,7 +92,7 @@ class TaskController extends Controller
         //
     }
 
-    public function reComplete($id)
+    public function reComplete()
     {
         //
     }

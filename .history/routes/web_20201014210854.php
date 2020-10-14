@@ -43,13 +43,12 @@ Route::prefix('frontend/task')
 ->group(function(){
     Route::get('/',[TaskController::class, 'index'])->name('task.index');
     Route::get('/',[TaskController::class, 'show'])->name('task.show');
-    Route::get('/edit',[TaskController::class, 'edit'])->name('task.edit');
+    Route::get('/',[TaskController::class, 'edit'])->name('task.edit');
     Route::delete('/destroy',[TaskController::class, 'destroy'])->name('task.destroy');
     Route::put('/update',[TaskController::class, 'update'])->name('task.update');
     Route::post('/store',[TaskController::class, 'store'])->name('task.store');
     Route::get('/create',[TaskController::class, 'create'])->name('task.store');
-    Route::get('/complete',[TaskController::class, 'complete'])->name('task.complete');
-    Route::get('/reComplete',[TaskController::class, 'reComplete'])->name('task.reComplete');
+    Route::get('/create',[TaskController::class, 'complete'])->name('task.complete');
 
 });
 

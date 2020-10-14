@@ -124,7 +124,7 @@
                         
                         <!-- Task Complete Button -->
                          <td>
-                            <a href="{{ route('task.complete') }}" type="submit" class="btn btn-success">
+                            <a href="{{ url('task/complete/1') }}" type="submit" class="btn btn-success">
                                 <i class="fa fa-btn fa-check"></i>Hoàn thành
                             </a>
                         </td> 
