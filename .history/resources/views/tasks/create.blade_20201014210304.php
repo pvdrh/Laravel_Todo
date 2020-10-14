@@ -20,7 +20,7 @@
                     <div class="col-sm-6">
                         <input type="text" name="name" id="task-name" class="form-control" value="{{ old('task') }}">
 
-                        <input type="datetime" name="deadline" id="task-deadline" class="form-control" value="{{ old('task') }}">
+                        <input type="email" name="deadline" id="task-deadline" class="form-control" value="{{ old('task') }}">
                     </div>
                 </div>
 

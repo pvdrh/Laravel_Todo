@@ -36,7 +36,7 @@ Route::get('/', function () {
 //         ->name('tasks.list');
 // });
 
-// Route::resource('frontend/task', \Frontend\TaskController::class);
+Route::resource('frontend/task', \Frontend\TaskController::class);
 // Route::get('frontend/task', 'TaskController@index');
 
 Route::prefix('frontend/task')
@@ -45,7 +45,7 @@ Route::prefix('frontend/task')
 
     Route::get('/',[TaskController::class, 'show'])->name('task.show');
 
-    Route::get('/',[TaskController::class, 'edit'])->name('task.edit');
+    Route::get('/',[TasphpkController::class, 'edit'])->name('task.edit');
 
     Route::delete('/',[TaskController::class, 'destroy'])->name('task.destroy');
 

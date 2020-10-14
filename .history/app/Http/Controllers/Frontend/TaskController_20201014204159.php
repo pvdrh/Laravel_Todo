@@ -35,10 +35,9 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        $name = $request->only('name');\
-        $deadline = $request->only('deadline');
+        $name = $request->except('name');
 
-        dd($name,$deadline);
+        dd($name);
     }
 
     /**
@@ -60,8 +59,8 @@ class TaskController extends Controller
      */
     public function edit($id)
     {
-        $name = 'Duy';
-        return view('tasks.edit');
+        // $name = 'Duy';
+        // return view('tasks.edit');
     }
 
     /**
@@ -86,5 +85,4 @@ class TaskController extends Controller
     {
         //
     }
-
 }

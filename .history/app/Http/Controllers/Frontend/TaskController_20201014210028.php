@@ -87,4 +87,8 @@ class TaskController extends Controller
         //
     }
 
+    public function destroy($id)
+    {
+        //
+    }
 }

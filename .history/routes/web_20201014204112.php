@@ -36,7 +36,7 @@ Route::get('/', function () {
 //         ->name('tasks.list');
 // });
 
-// Route::resource('frontend/task', \Frontend\TaskController::class);
+Route::resource('frontend/task', \Frontend\TaskController::class);
 // Route::get('frontend/task', 'TaskController@index');
 
 Route::prefix('frontend/task')

@@ -38,7 +38,7 @@ class TaskController extends Controller
         $name = $request->only('name');\
         $deadline = $request->only('deadline');
 
-        dd($name,$deadline);
+        dd($,);
     }
 
     /**
@@ -86,5 +86,4 @@ class TaskController extends Controller
     {
         //
     }
-
 }

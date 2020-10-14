@@ -36,9 +36,9 @@ class TaskController extends Controller
     public function store(Request $request)
     {
         $name = $request->only('name');\
-        $deadline = $request->only('deadline');
+        $deadline = $request->only('name');
 
-        dd($name,$deadline);
+        dd($name);
     }
 
     /**
@@ -86,5 +86,4 @@ class TaskController extends Controller
     {
         //
     }
-
 }

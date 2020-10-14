@@ -109,7 +109,7 @@
                         </td>
                         <!-- Task Delete Button -->
                          <td>
-                            <form action="{{ route('task.destroy') }}" method="POST">
+                            <form action="{{ route('task.update') }}" method="POST">
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
 
