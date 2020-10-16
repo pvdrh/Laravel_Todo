@@ -104,19 +104,13 @@
                             <td class="table-text"><div>{{$task->name}}</div></td> 
                             <!-- Task Complete Button -->
                             <td>
-                                <a href="{{ route('task.complete',$task['id']) }}" type="submit" class="btn btn-success">
+                                <a href="{{ url('task/complete/1') }}" type="submit" class="btn btn-success">
                                     <i class="fa fa-btn fa-check"></i>Hoàn thành
-                                </a>
-                            </td>
-                            <!-- Task Recomplete Button -->
-                            <td>
-                                <a href="{{ route('task.reComplete',$task['id']) }}" type="submit" class="btn btn-success">
-                                    <i class="fa fa-btn fa-check"></i>Làm Lại
                                 </a>
                             </td>
                             <!-- Task Delete Button -->
                              <td>
-                                <form action="{{ route('task.delete',$task['id']) }}" method="POST">
+                                <form action="{{ route('task.destroy',$task['id']) }}" method="POST">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
     

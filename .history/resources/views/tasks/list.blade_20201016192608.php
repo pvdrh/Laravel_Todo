@@ -108,12 +108,6 @@
                                     <i class="fa fa-btn fa-check"></i>Hoàn thành
                                 </a>
                             </td>
-                            <!-- Task Recomplete Button -->
-                            <td>
-                                <a href="{{ route('task.reComplete',$task['id']) }}" type="submit" class="btn btn-success">
-                                    <i class="fa fa-btn fa-check"></i>Làm Lại
-                                </a>
-                            </td>
                             <!-- Task Delete Button -->
                              <td>
                                 <form action="{{ route('task.delete',$task['id']) }}" method="POST">

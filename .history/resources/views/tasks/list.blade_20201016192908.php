@@ -110,7 +110,7 @@
                             </td>
                             <!-- Task Recomplete Button -->
                             <td>
-                                <a href="{{ route('task.reComplete',$task['id']) }}" type="submit" class="btn btn-success">
+                                <a href="{{ route('task.complete',$task['id']) }}" type="submit" class="btn btn-success">
                                     <i class="fa fa-btn fa-check"></i>Làm Lại
                                 </a>
                             </td>

@@ -32,7 +32,6 @@ class TaskController extends Controller
      */
     public function create()
     {
-        
         return view('tasks.create');
     }
 
@@ -94,17 +93,17 @@ class TaskController extends Controller
      */
     public function destroy($id)
     {
-        dd($id);
+        dd()
     }
 
     public function complete($id)
     {
-        dd($id);
+        //
     }
 
     public function reComplete($id)
     {
-        dd($id);
+        //
     }
 
 }

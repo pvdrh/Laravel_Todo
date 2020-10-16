@@ -43,16 +43,15 @@ Route::prefix('frontend/task')
 ->group(function(){
     Route::get('/',[TaskController::class, 'index'])->name('task.index');
     Route::get('/{id}',[TaskController::class, 'show'])->name('task.show');
-    Route::get('/{id}/edit',[TaskController::class, 'edit'])->name('task.edit');
-    Route::delete('/destroy/{id}',[TaskController::class, 'destroy'])->name('task.delete');
-    Route::put('/update/{id}',[TaskController::class, 'update'])->name('task.update');
+    Route::get('/edit',[TaskController::class, 'edit'])->name('task.edit');
+    Route::delete('/{id}',[TaskController::class, 'destroy'])->name('task.destroy');
+    Route::put('/update',[TaskController::class, 'update'])->name('task.update');
     Route::post('/store',[TaskController::class, 'store'])->name('task.store');
     Route::get('/create',[TaskController::class, 'create'])->name('task.store');
-    Route::get('/complete/{id}',[TaskController::class, 'complete'])->name('task.complete');
-    Route::get('/reComplete/{id}',[TaskController::class, 'reComplete'])->name('task.reComplete');
+    Route::get('/complete',[TaskController::class, 'complete'])->name('task.complete');
+    Route::get('/reComplete',[TaskController::class, 'reComplete'])->name('task.reComplete');
 
 });
-
 
 
 

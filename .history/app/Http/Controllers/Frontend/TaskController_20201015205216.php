@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Task;
 
 class TaskController extends Controller
 {
@@ -15,14 +14,9 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks = Task::where('status', 1)
-        ->orderBy('name', 'desc')
-        ->take(5)
-        ->get();
-       
-        return view('tasks.list', [
-            'tasks'=>$tasks
-        ]);
+        $tasks = Task::all();
+        dd($tasks);
+        return view('tasks.list');
     }
 
     /**
@@ -32,7 +26,6 @@ class TaskController extends Controller
      */
     public function create()
     {
-        
         return view('tasks.create');
     }
 
@@ -58,8 +51,7 @@ class TaskController extends Controller
      */
     public function show($id)
     {
-        $task = Task::find($id);
-        dd($task);
+        //
     }
 
     /**
@@ -94,17 +86,17 @@ class TaskController extends Controller
      */
     public function destroy($id)
     {
-        dd($id);
+        //
     }
 
     public function complete($id)
     {
-        dd($id);
+        //
     }
 
     public function reComplete($id)
     {
-        dd($id);
+        //
     }
 
 }

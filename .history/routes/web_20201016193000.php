@@ -49,7 +49,7 @@ Route::prefix('frontend/task')
     Route::post('/store',[TaskController::class, 'store'])->name('task.store');
     Route::get('/create',[TaskController::class, 'create'])->name('task.store');
     Route::get('/complete/{id}',[TaskController::class, 'complete'])->name('task.complete');
-    Route::get('/reComplete/{id}',[TaskController::class, 'reComplete'])->name('task.reComplete');
+    Route::get('/reComplete',[TaskController::class, 'reComplete'])->name('task.reComplete');
 
 });
 
