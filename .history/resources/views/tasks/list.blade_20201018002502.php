@@ -81,7 +81,7 @@
                     <div class="form-group">
                         <label for="task-name" class="col-sm-3 control-label">Thời hạn công việc</label>
                         <div class="col-sm-6">
-                            <input type="text" name="deadline" id="task-deadline" class="form-control" value="{{ old('task') }}">
+                            <input type="text" name="name" id="task-deadline" class="form-control" value="{{ old('task') }}">
                     </div>
                     
                     </div> 

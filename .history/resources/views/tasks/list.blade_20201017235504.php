@@ -72,16 +72,17 @@
                             <input type="text" name="name" id="task-name" class="form-control" value="{{ old('task') }}">
                         </div>
                     </div> 
+
                     <div class="form-group">
                         <label for="task-name" class="col-sm-3 control-label">Mô tả công việc</label>
                         <div class="col-sm-6">
-                            <input type="text" name="content" id="task-content" class="form-control" value="{{ old('task') }}">
+                            <input type="text" name="name" id="task-name" class="form-control" value="{{ old('task') }}">
                     </div>
-                    <hr>
+
                     <div class="form-group">
                         <label for="task-name" class="col-sm-3 control-label">Thời hạn công việc</label>
                         <div class="col-sm-6">
-                            <input type="text" name="deadline" id="task-deadline" class="form-control" value="{{ old('task') }}">
+                            <input type="text" name="name" id="task-name" class="form-control" value="{{ old('task') }}">
                     </div>
                     
                     </div> 

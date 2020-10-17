@@ -48,8 +48,9 @@ class TaskController extends Controller
         $task = new Task();
         $task->name = $request->name;
         $task->content = $request->content;
-        $task->status = 1;
-        $task->deadline = $request->deadline;
+        
+        
+        $task->status = 1;$task->deadline = $request->deadline;
         $task->save();
 
         return redirect()->route('task.index');
