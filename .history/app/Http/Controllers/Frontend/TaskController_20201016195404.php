@@ -15,10 +15,10 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks = Task::all();
-        // ->orderBy('name', 'desc')
-        // ->take(5)
-        // ->get();
+        $tasks = Task::where('status', 1)
+        ->orderBy('name', 'desc')
+        ->take(5)
+        ->get();
        
         return view('tasks.list', [
             'tasks'=>$tasks
@@ -44,18 +44,10 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
+        $name = $request->only('name');
+        $deadline = $request->only('deadline');
 
-        $task = new Task();
-        $task->name = $request->name;
-        $task->status = 0;
-        $task->save();
-
-        return redirect()->route('task.index');
-
-        // $name = $request->only('name');
-        // $deadline = $request->only('deadline');
-
-        // dd($name,$deadline);
+        dd($name,$deadline);
     }
 
     /**
@@ -103,8 +95,7 @@ class TaskController extends Controller
     public function destroy($id)
     {
         $task = Task::find($id);
-        $task->delete();
-        return redirect()->route('task.index');
+        $task
     }
 
     public function complete($id)

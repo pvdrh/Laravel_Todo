@@ -62,7 +62,7 @@
                 <!-- Display Validation Errors -->
 
                 <!-- New Task Form -->
-                 <form action="{{ route('task.store')}}" method="POST" class="form-horizontal">
+                 <form action="{{ route}}" method="POST" class="form-horizontal">
                 {{ csrf_field() }} 
 
                 <!-- Task Name -->

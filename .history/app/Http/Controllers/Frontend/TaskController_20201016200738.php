@@ -15,7 +15,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks = Task::all();
+        $tasks = Task::where('all')
         // ->orderBy('name', 'desc')
         // ->take(5)
         // ->get();

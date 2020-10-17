@@ -15,10 +15,10 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks = Task::all();
-        // ->orderBy('name', 'desc')
-        // ->take(5)
-        // ->get();
+        $tasks = Task::where('')
+        ->orderBy('name', 'desc')
+        ->take(5)
+        ->get();
        
         return view('tasks.list', [
             'tasks'=>$tasks

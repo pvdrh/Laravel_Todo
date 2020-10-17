@@ -15,10 +15,10 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks = Task::all();
-        // ->orderBy('name', 'desc')
-        // ->take(5)
-        // ->get();
+        $tasks = Task::where('status', 1)
+        ->orderBy('name', 'desc')
+        ->take(5)
+        ->get();
        
         return view('tasks.list', [
             'tasks'=>$tasks
@@ -47,10 +47,9 @@ class TaskController extends Controller
 
         $task = new Task();
         $task->name = $request->name;
-        $task->status = 0;
         $task->save();
 
-        return redirect()->route('task.index');
+        return redirect()->ro
 
         // $name = $request->only('name');
         // $deadline = $request->only('deadline');
