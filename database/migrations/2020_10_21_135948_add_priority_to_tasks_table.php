@@ -14,7 +14,7 @@ class AddPriorityToTasksTable extends Migration
     public function up()
     {
         Schema::table('tasks', function (Blueprint $table) {
-            $table->int('priority')->after('id');
+            $table->integer('priority')->after('name');
         });
     }
 

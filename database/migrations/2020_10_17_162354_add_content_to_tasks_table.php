@@ -14,7 +14,7 @@ class AddContentToTasksTable extends Migration
     public function up()
     {
         Schema::table('tasks', function (Blueprint $table) {
-            $table->text('content')->after('name')->nullable();;
+            $table->text('content')->after('name')->nullable();
         });
     }
 
