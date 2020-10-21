@@ -69,18 +69,24 @@
                     <tbody>
                         @foreach ($tasks as $task)
                         <tr>
-                            <td class="table-text"><div>{{$task->name}}</div></td> 
+                            @if($task->status==1)
+                             <td class="table-text"><div>{{$task->name}}</div></td>
+                            @endif
+
+                            @if($task->status==2)
+                            <td class="table-text"><div><strike>{{$task->name}}</strike></div></td>
+                            @endif
                             <!-- Task Complete Button -->
-                            @if($task->status==0 || $task->status==1)
+                            @if($task->status==1)
                             <td>
-                                <a href="#" type="submit" class="btn btn-success">
+                                <a href="{{route('task.complete',$task->id)}}" type="submit" class="btn btn-success">
                                     <i class="fa fa-btn fa-check"></i>Hoàn thành
                                 </a>
                             </td>
                             @endif
                             <!-- Task Recomplete Button -->
 
-                            @if($task->status==0 || $task->status==2)
+                            @if($task->status==2)
                             <td>
                                 <a href="{{route('task.reComplete',$task->id)}}" type="submit" class="btn btn-success">
                                     <i class="fa fa-btn fa-check"></i>Làm Lại

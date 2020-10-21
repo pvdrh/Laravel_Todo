@@ -26,16 +26,18 @@ class TaskController extends Controller
 
     }
 
-    public function update(Request $request, $id){
+    public function update(){
         $name = $request->get('name');
         $deadline = $request->get('deadline');
         $content = $request->get('content');
+        $priority = $request->get('priority');
         // Cập nhật
         $task = Task::find($id);
         $task->name = $name;
         $task->status = 1;
         $task->content = $content;
         $task->deadline = $deadline;
+        $task->priority = $priority;
         $task->save();
         return view('tasks.edit');
     }
@@ -56,6 +58,7 @@ class TaskController extends Controller
           $name=$request->get('name');
           $deadline=$request->get('deadline');
           $content=$request->get('content');
+          $priority=$request->get('priority');
           
           $deadline = str_replace('T', ' ', $deadline). ':';
 
@@ -65,6 +68,7 @@ class TaskController extends Controller
           $task->name = $name;
           $task->content = $content;
           $task->deadline = $deadline;
+          $task->priority = $priority;
           $task->status = 0;
           $task->save();
 
@@ -74,7 +78,6 @@ class TaskController extends Controller
     public function complete($id)
     {
         $task = Task::find($id);
-        $task = new Task();
         $task->status=2;
         $task->save();
 
@@ -84,7 +87,6 @@ class TaskController extends Controller
     public function reComplete($id)
     {
         $task = Task::find($id);
-        $task = new Task();
         $task->status=1;
         $task->save();
 

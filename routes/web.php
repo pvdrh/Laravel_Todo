@@ -75,7 +75,7 @@ Route::get('task/create', [
 
     Route::get('/Complete/{id}', [
         \App\Http\Controllers\Task\TaskController::class, 'Complete'])
-        ->name('task.Complete');
+        ->name('task.complete');
 
 
     Route::get('task/{id}/edit}', [

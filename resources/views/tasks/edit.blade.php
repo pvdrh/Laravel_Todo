@@ -40,15 +40,16 @@
                 <!-- Task Name -->
                     <div class="form-group">
                         <label for="task-name" class="col-sm-3 control-label">Tên công việc</label>
-
                         <div class="col-sm-6">
                             <input type="text" name="name" id="task-name" class="form-control" value="{{$task->name}}">
                         </div>
 
+                        <label for="task-deadline" class="col-sm-3 control-label">Thời hạn ưu tiên</label>
                         <div class="col-sm-6">
                             <input type="text" name="deadline" id="task-deadline" class="form-control" value="{{$task->deadline}}">
                         </div>
 
+                        <label for="task-content" class="col-sm-3 control-label">Nội dung công việc</label>
                         <div class="col-sm-6">
                             <input type="text" name="content" id="task-content" class="form-control" value="{{$task->content}}">
                         </div>
