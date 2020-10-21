@@ -35,6 +35,15 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <label for="task-priority" class="col-sm-3 control-label">Mức độ ưu tiên</label>
+                    <div class="col-sm-6">
+                        <input type="number" name="priority" id="task-priority" class="form-control" value="{{ old('task') }}">
+                    </div>
+                </div>
+
+                
+
                 <!-- Add Task Button -->
                 <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-6">

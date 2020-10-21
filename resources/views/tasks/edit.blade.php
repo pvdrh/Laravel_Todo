@@ -52,6 +52,13 @@
                         <div class="col-sm-6">
                             <input type="text" name="content" id="task-content" class="form-control" value="{{$task->content}}">
                         </div>
+
+                        
+                            <label for="task-priority" class="col-sm-3 control-label">Mức độ ưu tiên</label>
+                            <div class="col-sm-6">
+                                <input type="number" name="priority" id="task-priority" class="form-control" value="{{ old('task') }}">
+                            </div>
+                        
                     </div>
 
                     <!-- Add Task Button -->

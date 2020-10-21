@@ -73,7 +73,7 @@
                             <!-- Task Complete Button -->
                             @if($task->status==0 || $task->status==1)
                             <td>
-                                <a href="{{route('task.complete',$task->id)}}" type="submit" class="btn btn-success">
+                                <a href="#" type="submit" class="btn btn-success">
                                     <i class="fa fa-btn fa-check"></i>Hoàn thành
                                 </a>
                             </td>
