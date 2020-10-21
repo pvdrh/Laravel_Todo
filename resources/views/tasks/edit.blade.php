@@ -34,7 +34,7 @@
                 <!-- Display Validation Errors -->
 
                 <!-- New Task Form -->
-                <form action="{{route('task.update')}}" method="POST" class="form-horizontal">
+                <form action="{{route('task.update',$task->id)}}" method="POST" class="form-horizontal">
                 {{ csrf_field() }}
 
                 <!-- Task Name -->
@@ -42,7 +42,15 @@
                         <label for="task-name" class="col-sm-3 control-label">Tên công việc</label>
 
                         <div class="col-sm-6">
-                            <input type="text" name="name" id="task-name" class="form-control" value="{{$name}}">
+                            <input type="text" name="name" id="task-name" class="form-control" value="{{$task->name}}">
+                        </div>
+
+                        <div class="col-sm-6">
+                            <input type="text" name="deadline" id="task-deadline" class="form-control" value="{{$task->deadline}}">
+                        </div>
+
+                        <div class="col-sm-6">
+                            <input type="text" name="content" id="task-content" class="form-control" value="{{$task->content}}">
                         </div>
                     </div>
 
@@ -57,11 +65,6 @@
                 </form>
             </div>
         </div>
-
-
-                    </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </div>

@@ -53,51 +53,7 @@
 
 <div class="container">
     <div class="col-sm-offset-2 col-sm-8">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                Thêm công việc mới
-            </div>
-
-            <div class="panel-body"> 
-                <!-- Display Validation Errors -->
-
-                <!-- New Task Form -->
-                 <form action="{{ route('task.store')}}" method="POST" class="form-horizontal">
-                {{ csrf_field() }} 
-
-                <!-- Task Name -->
-                    <div class="form-group">
-                        <label for="task-name" class="col-sm-3 control-label">Tên công việc</label>
-                        <div class="col-sm-6">
-                            <input type="text" name="name" id="task-name" class="form-control" value="{{ old('task') }}">
-                        </div>
-                        
-                    </div> 
-                    <div class="form-group">
-                        <label for="task-name" class="col-sm-3 control-label">Mô tả công việc</label>
-                        <div class="col-sm-6">
-                            <input type="text" name="content" id="task-content" class="form-control" value="{{ old('task') }}">
-                    </div>
-                   
-                    </div> 
-                    <div class="form-group">
-                        <label for="task-name" class="col-sm-3 control-label">Thời hạn công việc</label>
-                        <div class="col-sm-6">
-                            <input type="text" name="deadline" id="task-deadline" class="form-control" value="{{ old('task') }}">
-                    </div>
-
-                    <!-- Add Task Button -->
-                    <div class="form-group">
-                        <div class="col-sm-offset-3 col-sm-6">
-                            <button  style="margin: 10px" type="submit" class="btn btn-default">
-                                <i class="fa fa-btn fa-plus"></i>Thêm công việc
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div> 
-
+        
         <!-- Current Tasks -->
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -115,15 +71,26 @@
                         <tr>
                             <td class="table-text"><div>{{$task->name}}</div></td> 
                             <!-- Task Complete Button -->
+                            @if($task->status==0 || $task->status==1)
                             <td>
-                                <a href="{{ route('task.complete',$task['id']) }}" type="submit" class="btn btn-success">
+                                <a href="{{route('task.complete',$task->id)}}" type="submit" class="btn btn-success">
                                     <i class="fa fa-btn fa-check"></i>Hoàn thành
                                 </a>
                             </td>
+                            @endif
                             <!-- Task Recomplete Button -->
+
+                            @if($task->status==0 || $task->status==2)
                             <td>
-                                <a href="{{ route('task.reComplete',$task['id']) }}" type="submit" class="btn btn-success">
+                                <a href="{{route('task.reComplete',$task->id)}}" type="submit" class="btn btn-success">
                                     <i class="fa fa-btn fa-check"></i>Làm Lại
+                                </a>
+                            </td>
+
+                            @endif
+                            <td>
+                            <a href="{{route('task.edit',$task->id)}}" type="submit" class="btn btn-info">
+                                    <i class="fa fa-btn fa-mask"></i>Chỉnh Sửa
                                 </a>
                             </td>
                             <!-- Task Delete Button -->
